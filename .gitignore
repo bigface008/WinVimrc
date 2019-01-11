@@ -1,0 +1,4 @@
+files/swap/*
+files/undo/*
+files/backup/*
+.fzf-history/*

@@ -1,4 +1,5 @@
-call plug#begin('D:\program\Vim\vimfiles\autoload')
+" Plugin Configuration
+call plug#begin('~\vimfiles\autoload')
 " UI
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -10,6 +11,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Tag Tree
 Plug 'majutsushi/tagbar'
 " Searcher
+Plug 'Yggdroot/LeaderF'
 " Plug 'D:\program\fzf'
 " Plug 'junegunn/fzf.vim'
 " Fast Edit
@@ -27,7 +29,8 @@ call plug#end()
 let g:airline#extensions#tabline#enabled = 1 " Enable tabline.
 let g:airline#extensions#tabline#tab_nr_type = 1 " Tab number.
 let g:airline#extensions#tabline#show_tab_nr = 1 " Tab number.
-let g:airline_theme='base16'
+let g:airline_symbols.linenr = ''
+let g:airline_symbols.maxlinenr = ''
 
 " NerdTree ------------------------------------------------------------------- "
 let NERDTreeShowHidden=1               " Show hidden file.

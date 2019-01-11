@@ -7,9 +7,9 @@ set ruler                    " Set ruler
 " set guifont=Source_Code_Variable:h11:b:cDEFAULT
 " set guifont=Source_Code_Variable:h11
 " set guifont=Courier_new:h11:b:cDEFAULT
-set guifont=Fira_Code:h11
+" set guifont=DejaVu_Sans_Mono_for_Powerline:h11
 " set guifont=Fantasque_Sans_Mono:h12
-" set guifont=Consolas:h12
+set guifont=Consolas:h12
 
 " Set cursor type
 " set gcr=a:block-blinkon0     " No flashing cursor
@@ -24,6 +24,8 @@ match WhitespaceEOL /\s\+$/
 " GUI config
 if has("gui_running")
 " au GUIEnter * simalt ~x      " Maximize gui window
+set lines=50
+set columns=160
 " set background=dark        " Set background
 colorscheme gotham           " Set theme
 set cursorline               " Show line cursor
