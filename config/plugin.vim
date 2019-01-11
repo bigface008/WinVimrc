@@ -10,8 +10,10 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Plug 'xuyuanp/nerdtree-git-plugin'
 " Tag Tree
 Plug 'majutsushi/tagbar'
+" Version Control
+Plug 'airblade/vim-gitgutter'
 " Searcher
-Plug 'Yggdroot/LeaderF'
+" Plug 'Yggdroot/LeaderF'
 " Plug 'D:\program\fzf'
 " Plug 'junegunn/fzf.vim'
 " Fast Edit
@@ -24,15 +26,18 @@ Plug 'easymotion/vim-easymotion'
 " Plug 'tmhedberg/simpylfold'
 call plug#end()
 
-" Airline -------------------------------------------------------------------- "
+" Airline
 " let g:airline_theme='codedark'       " Theme of airline.
 let g:airline#extensions#tabline#enabled = 1 " Enable tabline.
 let g:airline#extensions#tabline#tab_nr_type = 1 " Tab number.
 let g:airline#extensions#tabline#show_tab_nr = 1 " Tab number.
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
 let g:airline_symbols.linenr = ''
 let g:airline_symbols.maxlinenr = ''
 
-" NerdTree ------------------------------------------------------------------- "
+" NerdTree
 let NERDTreeShowHidden=1               " Show hidden file.
 let NERDTreeShowLineNumbers=1          " Show line number.
 let NERDTreeWinPos='left'              " Postion of nerdtree.
@@ -40,13 +45,13 @@ let NERDTreeWinSize=30                 " Size of nerdtree.
 let NERDTreeIgnore=['\.pyc$', '\~$']   " Ignore files in NERDTree.
 map <leader><leader>n :NERDTreeToggle<CR> " Shortcut for open nerdtree
 
-" IndentLine ----------------------------------------------------------------- "
+" IndentLine
 let g:indentLine_enabled=1             " Start indentLine.
 let g:indentLine_char='|'              " Set sign for number of tabs.
 let g:indentLine_leadingSpaceEnabled=1 " Show leading spaces.
 let g:indentLine_leadingSpaceChar='·'  " Set sign for leading spaces.
 
-" Tagbar --------------------------------------------------------------------- "
+" Tagbar
 let g:tagbar_ctags_bin='D:\program\ctags\ctags.exe'
 map <leader><leader>t :TagbarToggle<CR>
 
