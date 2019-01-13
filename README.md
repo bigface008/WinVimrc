@@ -1,10 +1,10 @@
-# Simple Vim Confiugration files for Windows
+# Ordinary Vimrc for Windows
 
 > Just for fun.
 
-这份配置文件试图将windows上的vim配置为一份快速的文本编辑器。它需要有完整的快捷键
+这份配置文件试图将windows上的vim配置为一份快速的文本编辑器。它需要有完善的快捷键
 配置，C、C++、Python、Javascript、Markdown的自动补全、快速跳转、语法检查、格式化
-支持。
+支持、版本控制初级支持。
 
 众所周知，Windows上使用Vim是非常尴尬的选择。但是考虑到Visual Studio Code启动速度
 实在堪忧等因素，我还是决定配置一份Windows上的vimrc。需要说明的是，Vim不会用来写
@@ -27,3 +27,4 @@
 ### High Performance
 
 利用各种native program来确保所有操作接近最高速。
+

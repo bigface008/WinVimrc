@@ -1,4 +1,6 @@
-files/swap/*
-files/undo/*
-files/backup/*
-.fzf-history/*
+files
+files
+files
+.fzf-history
+.ctrlp-cache
+autoload

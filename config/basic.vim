@@ -5,6 +5,7 @@ filetype on                  " Enable filetype check
 filetype plugin indent on    " Load plugins according to detected filetype
 set nocompatible             " Not compatible with Vi
 set vb t_vb=                 " Stop bell
+au GuiEnter * set t_vb=      " Stop screen shining
 set nowrap                   " Display auto new line
 set laststatus=2             " Always show statusline
 set display=lastline         " Show as much as possible of the last line
@@ -23,6 +24,7 @@ set lazyredraw               " Only redraw when necessary
 " set paste                  " Keep format when pasting, something wrong
 set ignorecase               " Ignore case when searching
 set autoread                 " Auto read file when changed
+set autowrite                " Auto write file when changed
 set updatetime=100           " Set updatetime
 
 " Backup settings

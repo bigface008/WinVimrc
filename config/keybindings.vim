@@ -12,8 +12,11 @@ inoremap <C-CR> <Esc>o
 
 nnoremap j gj
 nnoremap k gk
-nnoremap <leader>s :w<Enter>
+nnoremap <C-s> :w<Enter>
 
 " Move faster between buffers.
-noremap <leader>n :bn<Enter>
-noremap <leader>p :bp<Enter>
+" noremap <leader>n :bn<Enter>
+" noremap <leader>p :bp<Enter>
+noremap <C-Tab> :bn<Enter>
+noremap <C-S-Tab> :bp<Enter>
+
