@@ -9,6 +9,7 @@ inoremap <C-a> <Esc>I
 " inoremap <C-c><C-c> <Esc>o
 " inoremap <C-c> <Esc>O
 inoremap <C-CR> <Esc>o
+inoremap <C-S-CR> <Esc>O
 
 nnoremap j gj
 nnoremap k gk
@@ -19,4 +20,8 @@ nnoremap <C-s> :w<Enter>
 " noremap <leader>p :bp<Enter>
 noremap <C-Tab> :bn<Enter>
 noremap <C-S-Tab> :bp<Enter>
+
+nnoremap <leader><leader>h :vertical help 
+nnoremap <F2> :cd ~\vimfiles<Enter>
+nnoremap <F5> :source %<Enter>
 

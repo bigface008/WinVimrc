@@ -1,11 +1,11 @@
 " Plugin Configuration
 call plug#begin('~\vimfiles\autoload')
 " UI
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
-Plug 'whatyouhide/vim-gotham'
 Plug 'joshdick/onedark.vim'
+Plug 'cormacrelf/vim-colors-github'
 " File Tree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Plug 'xuyuanp/nerdtree-git-plugin'
@@ -15,6 +15,8 @@ Plug 'majutsushi/tagbar'
 " Plug 'airblade/vim-gitgutter'
 " Searcher
 Plug 'Yggdroot/LeaderF'
+Plug 'D:\program\fzf\fzf.exe'
+Plug 'junegunn/fzf.vim'
 " Better Editor
 Plug 'terryma/vim-multiple-cursors'
 " Plug 'ctrlpvim/ctrlp.vim'
@@ -86,3 +88,7 @@ endif
 let g:Lf_StlSeparator = { 'left': '', 'right': '' }
 let g:Lf_Ctags = "D:\\program\\ctags\\ctags.exe"
 noremap <C-S-o> :LeaderfFunction<Enter>
+
+" vim-colors-github
+let g:github_colors_soft = 1           " use a slightly darker background, like GitHub inline code blocks
+let g:github_colors_block_diffmark = 0 " more blocky diff markers in signcolumn (e.g. GitGutter)
