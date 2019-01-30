@@ -1,6 +1,6 @@
 " UI settings
 set nu                       " Show line number
-set relativenumber           " Show relative line number
+" set relativenumber           " Show relative line number
 set ruler                    " Set ruler
 
 " Set font type
@@ -27,9 +27,9 @@ if has("gui_running")
 au GUIEnter * simalt ~x      " Maximize gui window
 " set lines=50
 " set columns=180
-" set background=dark        " Set background
-colorscheme github           " Set theme
-" set cursorline             " Show line cursor
+set background=light         " Set background
+colorscheme papercolor       " Set theme
+set cursorline               " Show line cursor
 " set cursorcolumn           " Show column cursor
 set cc=80                    " Hightlight column 80
 set guioptions-=m            " Hide menu bar
@@ -41,11 +41,12 @@ set guioptions-=b            " Hide bottom scroll bar
 endif
 
 set statusline=
-set statusline+=%#LineNr#
+" set statusline+=%#LineNr#
+" set statusline+=%#PmenuSel#
 set statusline+=\ %f
 set statusline+=%m\
 set statusline+=%=
-set statusline+=%#LineNr#
+" set statusline+=%#LineNr#
 set statusline+=\ %y
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}\]
