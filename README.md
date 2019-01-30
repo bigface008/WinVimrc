@@ -1,4 +1,4 @@
-# Ordinary Vimrc for Windows
+# 普通的Vim配置文件
 
 > Just for fun.
 
@@ -13,14 +13,15 @@
 
 本项目配置过程中的各种经验会放置在[个人博客](https://bigface008.github.io)上。
 
+另外，目前的进度仍然堪忧......
+
 ## 原则
 
 不定期更新。另外配置Vim过程中的各种经验不应放置在本仓库内。
 
 ### Light Weight
 
-目标是**开启->编辑->关闭**。参考[无头骑士异闻录](https://www.bilibili.com/bangumi/media/md1656/?from=search&seid=1843232236060658596)
-中赛姐编辑对话的情景。要的就是那种感觉。
+目标是**开启->编辑->关闭**。参考[无头骑士异闻录](https://www.bilibili.com/bangumi/media/md1656/?from=search&seid=1843232236060658596)中赛姐编辑对话的情景。要的就是那种感觉。
 
 ### Editor. Refined.
 
