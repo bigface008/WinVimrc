@@ -24,3 +24,7 @@ noremap <C-S-Tab> :bp<Enter>
 nnoremap <leader><leader>h :vertical help 
 nnoremap <F2> :source %<Enter>
 
+nnoremap <leader><leader>h :vertical help 
+nnoremap <F2> :cd ~\vimfiles<Enter>
+nnoremap <F5> :source %<Enter>
+

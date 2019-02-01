@@ -5,8 +5,7 @@ call plug#begin('~\vimfiles\autoload')
 " Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
 Plug 'cormacrelf/vim-colors-github'
-Plug 'nanotech/jellybeans.vim'
-Plug 'rakr/vim-one'
+Plug 'NLKNguyen/papercolor-theme'
 " File Tree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Plug 'xuyuanp/nerdtree-git-plugin'
@@ -16,6 +15,8 @@ Plug 'majutsushi/tagbar'
 " Plug 'airblade/vim-gitgutter'
 " Searcher
 Plug 'Yggdroot/LeaderF'
+Plug 'D:\program\fzf\fzf.exe'
+Plug 'junegunn/fzf.vim'
 " Better Editor
 Plug 'terryma/vim-multiple-cursors'
 " Plug 'ctrlpvim/ctrlp.vim'
@@ -87,9 +88,101 @@ endif
 let g:Lf_StlSeparator = { 'left': '', 'right': '' }
 let g:Lf_Ctags = "D:\\program\\ctags\\ctags.exe"
 let g:Lf_ReverseOrder = 1
-noremap <leader>o :LeaderfFunction<Enter>
+let g:Lf_WindowHeight = 0.30
+noremap <C-S-o> :LeaderfFunction<Enter>
+let g:Lf_StlPalette = {
+        \   'stlName': {
+        \       'gui': 'bold',
+        \       'font': 'NONE',
+        \       'guifg': '#eeeeee',
+        \       'guibg': '#005f87',
+        \       'cterm': 'bold',
+        \       'ctermfg': '22',
+        \       'ctermbg': '157'
+        \   },
+        \   'stlCategory': {
+        \       'gui': 'NONE',
+        \       'font': 'NONE',
+        \       'guifg': '#eeeeee',
+        \       'guibg': '#005f87',
+        \       'cterm': 'NONE',
+        \       'ctermfg': '16',
+        \       'ctermbg': '210'
+        \   },
+        \   'stlNameOnlyMode': {
+        \       'gui': 'NONE',
+        \       'font': 'NONE',
+        \       'guifg': '#000000',
+        \       'guibg': '#E8ED51',
+        \       'cterm': 'NONE',
+        \       'ctermfg': '16',
+        \       'ctermbg': '227'
+        \   },
+        \   'stlFullPathMode': {
+        \       'gui': 'NONE',
+        \       'font': 'NONE',
+        \       'guifg': '#eeeeee',
+        \       'guibg': '#005f87',
+        \       'cterm': 'NONE',
+        \       'ctermfg': '16',
+        \       'ctermbg': '147'
+        \   },
+        \   'stlFuzzyMode': {
+        \       'gui': 'NONE',
+        \       'font': 'NONE',
+        \       'guifg': '#000000',
+        \       'guibg': '#E8ED51',
+        \       'cterm': 'NONE',
+        \       'ctermfg': '16',
+        \       'ctermbg': '227'
+        \   },
+        \   'stlRegexMode': {
+        \       'gui': 'NONE',
+        \       'font': 'NONE',
+        \       'guifg': '#000000',
+        \       'guibg': '#7FECAD',
+        \       'cterm': 'NONE',
+        \       'ctermfg': '16',
+        \       'ctermbg': '121'
+        \   },
+        \   'stlCwd': {
+        \       'gui': 'NONE',
+        \       'font': 'NONE',
+        \       'guifg': '#EBFFEF',
+        \       'guibg': '#005f87',
+        \       'cterm': 'NONE',
+        \       'ctermfg': '195',
+        \       'ctermbg': '241'
+        \   },
+        \   'stlBlank': {
+        \       'gui': 'NONE',
+        \       'font': 'NONE',
+        \       'guifg': 'NONE',
+        \       'guibg': '#005f87',
+        \       'cterm': 'NONE',
+        \       'ctermfg': 'NONE',
+        \       'ctermbg': '237'
+        \   },
+        \   'stlLineInfo': {
+        \       'gui': 'NONE',
+        \       'font': 'NONE',
+        \       'guifg': '#eeeeee',
+        \       'guibg': '#005f87',
+        \       'cterm': 'NONE',
+        \       'ctermfg': '16',
+        \       'ctermbg': '195'
+        \   },
+        \   'stlTotal': {
+        \       'gui': 'NONE',
+        \       'font': 'NONE',
+        \       'guifg': '#eeeeee',
+        \       'guibg': '#005f87',
+        \       'cterm': 'NONE',
+        \       'ctermfg': '16',
+        \       'ctermbg': '149'
+        \   }
+        \ }
 
-" Github Colorscheme
-let g:airline_theme = "github"
+" vim-colors-github
 let g:github_colors_soft = 1           " use a slightly darker background, like GitHub inline code blocks
 let g:github_colors_block_diffmark = 0 " more blocky diff markers in signcolumn (e.g. GitGutter)
