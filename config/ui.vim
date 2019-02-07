@@ -30,7 +30,7 @@ au GUIEnter * simalt ~x      " Maximize gui window
 " set columns=180
 " set background=light       " Set background
 colorscheme github           " Set theme
-" set cursorline             " Show line cursor
+set cursorline               " Show line cursor
 " set cursorcolumn           " Show column cursor
 set cc=80                    " Hightlight column 80
 set guioptions-=m            " Hide menu bar

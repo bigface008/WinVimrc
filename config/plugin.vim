@@ -15,7 +15,7 @@ Plug 'Yggdroot/LeaderF'
 Plug 'D:\program\fzf\fzf.exe'
 Plug 'junegunn/fzf.vim'
 " Language Support
-" Plug 'Valloric/YouCompleteMe'
+Plug 'ludovicchabant/vim-gutentags'
 " Better Editor
 Plug 'terryma/vim-multiple-cursors'
 " Plug 'tpope/vim-surround'
@@ -42,23 +42,23 @@ let g:indentLine_leadingSpaceChar='·'  " Set sign for leading spaces.
 let g:indentLine_fileTypeExclude = ['nerdtree'] " Fix the problem of indentation in nerdtree.
 
 " Tagbar
-let g:tagbar_ctags_bin='D:\program\ctags\ctags.exe'
+let g:tagbar_ctags_bin="D:\\program\\ctags\\ctags.exe"
 let g:tagbar_sort=0
 map <leader><leader>t :TagbarToggle<CR>
-let g:tagbar_type_markdown = {
-    \ 'ctagstype': 'markdown',
-    \ 'ctagsbin' : '~\vimfiles\markdown2ctags.py',
-    \ 'ctagsargs' : '-f - --sort=yes --sro=»',
-    \ 'kinds' : [
-        \ 's:sections',
-        \ 'i:images'
-    \ ],
-    \ 'sro' : '»',
-    \ 'kind2scope' : {
-        \ 's' : 'section',
-    \ },
-    \ 'sort': 1,
-\ }
+" let g:tagbar_type_markdown = {
+"     \ 'ctagstype': 'markdown',
+"     \ 'ctagsbin' : '~\vimfiles\markdown2ctags.py',
+"     \ 'ctagsargs' : '-f - --sort=yes --sro=»',
+"     \ 'kinds' : [
+"         \ 's:sections',
+"         \ 'i:images'
+"     \ ],
+"     \ 'sro' : '»',
+"     \ 'kind2scope' : {
+"         \ 's' : 'section',
+"     \ },
+"     \ 'sort': 1,
+" \ }
 " let g:tagbar_type_markdown = {
     " \ 'ctagstype' : 'markdown',
     " \ 'kinds' : [
@@ -198,6 +198,9 @@ let g:Lf_StlPalette = {
 let g:github_colors_soft = 1           " use a slightly darker background, like GitHub inline code blocks
 let g:github_colors_block_diffmark = 0 " more blocky diff markers in signcolumn (e.g. GitGutter)
 
+" gruvbox
+let g:gruvbox_contrast_light='soft'
+
 " clang_complete
 " path to directory where library can be found
 let g:clang_library_path='D:\\program\\LLVM\\bin'
@@ -240,4 +243,7 @@ let g:clang_library_path='D:\\program\\LLVM\\bin'
             " \}
 " let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
 " let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
+
+" vim-gutentags
+
 

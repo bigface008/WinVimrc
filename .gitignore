@@ -2,3 +2,5 @@ files
 .fzf-history/*
 .ctrlp-cache/*
 autoload
+tags
+

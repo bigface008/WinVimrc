@@ -18,7 +18,7 @@ set hlsearch                 " Hightlight the search
 set incsearch                " Move to fit position after each char input
 set hidden                   " Swith between buffers without saving first
 set clipboard=unnamed        " Use system clipboard
-set backspace=indent,eol,start " Better backspace
+" set backspace=indent,eol,start " Better backspace
 set ttyfast                  " Fast redrawing
 set lazyredraw               " Only redraw when necessary
 " set novisualbell           " Something wrong
