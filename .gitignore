@@ -1,4 +1,4 @@
 files
-.fzf-history\*
-.ctrlp-cache\*
+.fzf-history/*
+.ctrlp-cache/*
 autoload

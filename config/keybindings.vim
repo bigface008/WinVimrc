@@ -19,7 +19,10 @@ nnoremap <C-s> :w<Enter>
 " noremap <leader>n :bn<Enter>
 " noremap <leader>p :bp<Enter>
 noremap <C-Tab> :bn<Enter>
-noremap <C-S-Tab> :bp<Enter>
+noremap <C-S-Tab> :bp<Enter> 
+
+nnoremap <leader><leader>h :vertical help 
+nnoremap <F2> :source %<Enter>
 
 nnoremap <leader><leader>h :vertical help 
 nnoremap <F2> :cd ~\vimfiles<Enter>
