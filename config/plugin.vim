@@ -1,11 +1,8 @@
 " Plugin Configuration
 call plug#begin('~\vimfiles\autoload')
 " UI
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
 Plug 'cormacrelf/vim-colors-github'
-Plug 'NLKNguyen/papercolor-theme'
 " File Tree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Plug 'xuyuanp/nerdtree-git-plugin'
@@ -17,26 +14,16 @@ Plug 'majutsushi/tagbar'
 Plug 'Yggdroot/LeaderF'
 Plug 'D:\program\fzf\fzf.exe'
 Plug 'junegunn/fzf.vim'
+" Language Support
+" Plug 'Valloric/YouCompleteMe'
 " Better Editor
 Plug 'terryma/vim-multiple-cursors'
-" Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'easymotion/vim-easymotion'
 " Plug 'tmhedberg/simpylfold'
 call plug#end()
-
-" Airline
-" let g:airline_theme='codedark'       " Theme of airline.
-let g:airline#extensions#tabline#enabled = 1 " Enable tabline.
-let g:airline#extensions#tabline#tab_nr_type = 1 " Tab number.
-let g:airline#extensions#tabline#show_tab_nr = 1 " Tab number.
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_symbols.linenr = ''
-let g:airline_symbols.maxlinenr = ''
 
 " NerdTree
 let NERDTreeShowHidden = 1             " Show hidden file.
@@ -56,7 +43,30 @@ let g:indentLine_fileTypeExclude = ['nerdtree'] " Fix the problem of indentation
 
 " Tagbar
 let g:tagbar_ctags_bin='D:\program\ctags\ctags.exe'
+let g:tagbar_sort=0
 map <leader><leader>t :TagbarToggle<CR>
+let g:tagbar_type_markdown = {
+    \ 'ctagstype': 'markdown',
+    \ 'ctagsbin' : '~\vimfiles\markdown2ctags.py',
+    \ 'ctagsargs' : '-f - --sort=yes --sro=»',
+    \ 'kinds' : [
+        \ 's:sections',
+        \ 'i:images'
+    \ ],
+    \ 'sro' : '»',
+    \ 'kind2scope' : {
+        \ 's' : 'section',
+    \ },
+    \ 'sort': 1,
+\ }
+" let g:tagbar_type_markdown = {
+    " \ 'ctagstype' : 'markdown',
+    " \ 'kinds' : [
+        " \ 'h:Heading_L1',
+        " \ 'i:Heading_L2',
+        " \ 'k:Heading_L3'
+    " \ ]
+" \ }
 
 " NerdCommenter
 let g:NERDSpaceDelims=1                " Put one space between comment and first word
@@ -89,7 +99,8 @@ let g:Lf_StlSeparator = { 'left': '', 'right': '' }
 let g:Lf_Ctags = "D:\\program\\ctags\\ctags.exe"
 let g:Lf_ReverseOrder = 1
 let g:Lf_WindowHeight = 0.30
-noremap <C-S-o> :LeaderfFunction<Enter>
+noremap <leader>o :LeaderfFunction<Enter>
+noremap <leader>r :LeaderfMru<Enter>
 let g:Lf_StlPalette = {
         \   'stlName': {
         \       'gui': 'bold',
@@ -186,3 +197,47 @@ let g:Lf_StlPalette = {
 " vim-colors-github
 let g:github_colors_soft = 1           " use a slightly darker background, like GitHub inline code blocks
 let g:github_colors_block_diffmark = 0 " more blocky diff markers in signcolumn (e.g. GitGutter)
+
+" clang_complete
+" path to directory where library can be found
+let g:clang_library_path='D:\\program\\LLVM\\bin'
+" or path directly to the library file
+" let g:clang_library_path='/usr/lib64/libclang.so.3.8'
+
+" YouCompleteMe
+" set tags=./.tags;,.tags,tags,/home/dashi/workspace/lib_tags/systags
+" let g:ycm_server_python_interpreter='D:\\program\\Python\\Python27'
+" let g:ycm_collect_identifiers_from_tags_files=1
+" let g:ycm_confirm_extra_conf=1
+" " let g:ycm_extra_conf_globlist=['~/workspace/*', '!~/*']
+" let g:ycm_filepath_completion_use_working_dir=1
+" " let g:ycm_global_ycm_extra_conf='~/.vim/source/'
+" " let g:ycm_seed_identifiers_with_syntax=1
+" let g:ycm_add_preview_to_completeopt=0
+" let g:ycm_min_num_identifier_candidate_chars=2
+" " let g:ycm_autoclose_preview_window_after_completion=1
+" set completeopt=menu,menuone
+" let g:ycm_complete_in_strings=1
+" let g:ycm_semantic_triggers =  {
+            " \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
+            " \ 'cs,lua,javascript': ['re!\w{2}'],
+            " \ }
+" let g:ycm_filetype_whitelist = { 
+            " \ "h":1,
+            " \ "hpp":1,
+            " \ "c":1,
+            " \ "cpp":1, 
+            " \ "objc":1,
+            " \ "sh":1,
+            " \ "zsh":1,
+            " \ "zimbu":1,
+            " \ }
+" let g:ycm_filetype_blacklist={
+            " \ 'markdown' : 1,
+            " \ 'text' : 1,
+            " \ 'tagbar' : 1,
+            " \ 'infolog' : 1,
+            " \}
+" let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
+" let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
+
