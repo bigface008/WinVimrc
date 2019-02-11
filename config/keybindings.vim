@@ -28,3 +28,6 @@ nnoremap <leader><leader>h :vertical help
 nnoremap <F2> :cd ~\vimfiles<Enter>
 nnoremap <F5> :source %<Enter>
 
+" Fullscreen.
+map <F11> <Esc>:call libcallnr("gvimfullscreen_64.dll", "ToggleFullScreen", 0)<CR>
+

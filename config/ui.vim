@@ -10,7 +10,7 @@ set ruler                    " Set ruler
 " set guifont=DejaVu_Sans_Mono_for_Powerline:h11
 " set guifont=Fantasque_Sans_Mono:h12
 set guifont=Consolas:h10
-set guifontwide=黑体:h10
+" set guifontwide=黑体:h10
 " set guifont=Monaco:h11
 
 " Set cursor type
@@ -25,18 +25,18 @@ match WhitespaceEOL /\s\+$/
 
 " GUI config
 if has("gui_running")
-au GUIEnter * simalt ~x      " Maximize gui window
-" set lines=50
-" set columns=180
-" set background=light       " Set background
-colorscheme github           " Set theme
-" set cursorline             " Show line cursor
+" au GUIEnter * simalt ~x    " Maximize gui window
+set lines=35
+set columns=120
+set background=dark          " Set background
+colorscheme solarized        " Set theme
+set cursorline               " Show line cursor
 " set cursorcolumn           " Show column cursor
 set cc=80                    " Hightlight column 80
 set guioptions-=m            " Hide menu bar
 set guioptions-=T            " Hide tool bar
-" set guioptions-=L          " Hide left scroll bar
-" set guioptions-=r          " Hide right scroll bar
+set guioptions-=L            " Hide left scroll bar
+set guioptions-=r            " Hide right scroll bar
 " set guioptions-=b          " Hide bottom scroll bar
 " set showtabline=0          " Hide tab line
 endif

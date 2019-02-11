@@ -3,6 +3,8 @@ call plug#begin('~\vimfiles\autoload')
 " UI
 Plug 'Yggdroot/indentLine'
 Plug 'cormacrelf/vim-colors-github'
+Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
 " File Tree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Plug 'xuyuanp/nerdtree-git-plugin'
@@ -89,11 +91,6 @@ nmap <leader>k <Plug>(easymotion-k)
 let g:multi_cursor_exit_from_visual_mode = 0
 let g:multi_cursor_exit_from_insert_mode = 0
 
-" Ack.vim & Ag
-if executable('ag.exe')
-  let g:ackprg = 'ag --vimgrep'
-endif
-
 " LeaderF
 let g:Lf_StlSeparator = { 'left': '', 'right': '' }
 let g:Lf_Ctags = "D:\\program\\ctags\\ctags.exe"
@@ -101,6 +98,7 @@ let g:Lf_ReverseOrder = 1
 let g:Lf_WindowHeight = 0.30
 noremap <leader>o :LeaderfFunction<Enter>
 noremap <leader>r :LeaderfMru<Enter>
+noremap <leader>l :LeaderfLine<Enter>
 let g:Lf_StlPalette = {
         \   'stlName': {
         \       'gui': 'bold',
@@ -240,4 +238,7 @@ let g:clang_library_path='D:\\program\\LLVM\\bin'
             " \}
 " let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
 " let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
+
+" gruvbox
+let g:gruvbox_contrast_light="soft"
 
