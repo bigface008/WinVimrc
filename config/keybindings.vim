@@ -9,7 +9,7 @@ inoremap <C-a> <Esc>I
 " inoremap <C-c><C-c> <Esc>o
 " inoremap <C-c> <Esc>O
 inoremap <C-CR> <Esc>o
-inoremap <C-S-CR> <Esc>O
+inoremap <S-CR> <Esc>O
 
 nnoremap j gj
 nnoremap k gk
@@ -30,4 +30,7 @@ nnoremap <F5> :source %<Enter>
 
 " Fullscreen.
 map <F11> <Esc>:call libcallnr("gvimfullscreen_64.dll", "ToggleFullScreen", 0)<CR>
+
+" Close highlight for search result.
+nnoremap <leader><leader>n :noh<Enter>
 

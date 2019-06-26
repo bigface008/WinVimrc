@@ -2,6 +2,8 @@
 set nu                       " Show line number
 " set relativenumber           " Show relative line number
 set ruler                    " Set ruler
+set cursorline
+set cursorcolumn
 
 " Set font type
 " set guifont=Source_Code_Variable:h11:b:cDEFAULT
@@ -9,7 +11,9 @@ set ruler                    " Set ruler
 " set guifont=Courier_new:h11:b:cDEFAULT
 " set guifont=DejaVu_Sans_Mono_for_Powerline:h11
 " set guifont=Fantasque_Sans_Mono:h12
-set guifont=Consolas:h10
+" set guifont=Consolas:h11
+set guifont=CamingoCode:h11
+" set guifont=Fira_Code_Regular:h10
 " set guifontwide=黑体:h10
 " set guifont=Monaco:h11
 
@@ -25,12 +29,12 @@ match WhitespaceEOL /\s\+$/
 
 " GUI config
 if has("gui_running")
-" au GUIEnter * simalt ~x    " Maximize gui window
-set lines=35
-set columns=120
-set background=dark          " Set background
-colorscheme solarized        " Set theme
-set cursorline               " Show line cursor
+au GUIEnter * simalt ~x    " Maximize gui window
+" set lines=35
+" set columns=120
+set background=light         " Set background
+colorscheme PaperColor    " Set theme
+" set cursorline               " Show line cursor
 " set cursorcolumn           " Show column cursor
 set cc=80                    " Hightlight column 80
 set guioptions-=m            " Hide menu bar

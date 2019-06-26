@@ -3,8 +3,7 @@ call plug#begin('~\vimfiles\autoload')
 " UI
 Plug 'Yggdroot/indentLine'
 Plug 'cormacrelf/vim-colors-github'
-Plug 'altercation/vim-colors-solarized'
-Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
 " File Tree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 " Plug 'xuyuanp/nerdtree-git-plugin'
@@ -17,8 +16,10 @@ Plug 'Yggdroot/LeaderF'
 Plug 'D:\program\fzf\fzf.exe'
 Plug 'junegunn/fzf.vim'
 " Language Support
-" Plug 'Valloric/YouCompleteMe'
+" Plug 'ludovicchabant/vim-gutentags'
 " Better Editor
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'vim-python/python-syntax'
 Plug 'terryma/vim-multiple-cursors'
 " Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
@@ -44,23 +45,23 @@ let g:indentLine_leadingSpaceChar='·'  " Set sign for leading spaces.
 let g:indentLine_fileTypeExclude = ['nerdtree'] " Fix the problem of indentation in nerdtree.
 
 " Tagbar
-let g:tagbar_ctags_bin='D:\program\ctags\ctags.exe'
+let g:tagbar_ctags_bin="D:\\program\\ctags\\ctags.exe"
 let g:tagbar_sort=0
 map <leader><leader>t :TagbarToggle<CR>
-let g:tagbar_type_markdown = {
-    \ 'ctagstype': 'markdown',
-    \ 'ctagsbin' : '~\vimfiles\markdown2ctags.py',
-    \ 'ctagsargs' : '-f - --sort=yes --sro=»',
-    \ 'kinds' : [
-        \ 's:sections',
-        \ 'i:images'
-    \ ],
-    \ 'sro' : '»',
-    \ 'kind2scope' : {
-        \ 's' : 'section',
-    \ },
-    \ 'sort': 1,
-\ }
+" let g:tagbar_type_markdown = {
+"     \ 'ctagstype': 'markdown',
+"     \ 'ctagsbin' : '~\vimfiles\markdown2ctags.py',
+"     \ 'ctagsargs' : '-f - --sort=yes --sro=»',
+"     \ 'kinds' : [
+"         \ 's:sections',
+"         \ 'i:images'
+"     \ ],
+"     \ 'sro' : '»',
+"     \ 'kind2scope' : {
+"         \ 's' : 'section',
+"     \ },
+"     \ 'sort': 1,
+" \ }
 " let g:tagbar_type_markdown = {
     " \ 'ctagstype' : 'markdown',
     " \ 'kinds' : [
@@ -103,8 +104,8 @@ let g:Lf_StlPalette = {
         \   'stlName': {
         \       'gui': 'bold',
         \       'font': 'NONE',
-        \       'guifg': '#eeeeee',
-        \       'guibg': '#005f87',
+        \       'guifg': '#000000',
+        \       'guibg': '#fabd2f',
         \       'cterm': 'bold',
         \       'ctermfg': '22',
         \       'ctermbg': '157'
@@ -112,8 +113,8 @@ let g:Lf_StlPalette = {
         \   'stlCategory': {
         \       'gui': 'NONE',
         \       'font': 'NONE',
-        \       'guifg': '#eeeeee',
-        \       'guibg': '#005f87',
+        \       'guifg': '#000000',
+        \       'guibg': '#fabd2f',
         \       'cterm': 'NONE',
         \       'ctermfg': '16',
         \       'ctermbg': '210'
@@ -130,8 +131,8 @@ let g:Lf_StlPalette = {
         \   'stlFullPathMode': {
         \       'gui': 'NONE',
         \       'font': 'NONE',
-        \       'guifg': '#eeeeee',
-        \       'guibg': '#005f87',
+        \       'guifg': '#000000',
+        \       'guibg': '#fabd2f',
         \       'cterm': 'NONE',
         \       'ctermfg': '16',
         \       'ctermbg': '147'
@@ -157,8 +158,8 @@ let g:Lf_StlPalette = {
         \   'stlCwd': {
         \       'gui': 'NONE',
         \       'font': 'NONE',
-        \       'guifg': '#EBFFEF',
-        \       'guibg': '#005f87',
+        \       'guifg': '#000000',
+        \       'guibg': '#fabd2f',
         \       'cterm': 'NONE',
         \       'ctermfg': '195',
         \       'ctermbg': '241'
@@ -167,7 +168,7 @@ let g:Lf_StlPalette = {
         \       'gui': 'NONE',
         \       'font': 'NONE',
         \       'guifg': 'NONE',
-        \       'guibg': '#005f87',
+        \       'guibg': '#fabd2f',
         \       'cterm': 'NONE',
         \       'ctermfg': 'NONE',
         \       'ctermbg': '237'
@@ -175,8 +176,8 @@ let g:Lf_StlPalette = {
         \   'stlLineInfo': {
         \       'gui': 'NONE',
         \       'font': 'NONE',
-        \       'guifg': '#eeeeee',
-        \       'guibg': '#005f87',
+        \       'guifg': '#000000',
+        \       'guibg': '#fabd2f',
         \       'cterm': 'NONE',
         \       'ctermfg': '16',
         \       'ctermbg': '195'
@@ -184,8 +185,8 @@ let g:Lf_StlPalette = {
         \   'stlTotal': {
         \       'gui': 'NONE',
         \       'font': 'NONE',
-        \       'guifg': '#eeeeee',
-        \       'guibg': '#005f87',
+        \       'guifg': '#000000',
+        \       'guibg': '#fabd2f',
         \       'cterm': 'NONE',
         \       'ctermfg': '16',
         \       'ctermbg': '149'
@@ -196,49 +197,9 @@ let g:Lf_StlPalette = {
 let g:github_colors_soft = 1           " use a slightly darker background, like GitHub inline code blocks
 let g:github_colors_block_diffmark = 0 " more blocky diff markers in signcolumn (e.g. GitGutter)
 
-" clang_complete
-" path to directory where library can be found
-let g:clang_library_path='D:\\program\\LLVM\\bin'
-" or path directly to the library file
-" let g:clang_library_path='/usr/lib64/libclang.so.3.8'
-
-" YouCompleteMe
-" set tags=./.tags;,.tags,tags,/home/dashi/workspace/lib_tags/systags
-" let g:ycm_server_python_interpreter='D:\\program\\Python\\Python27'
-" let g:ycm_collect_identifiers_from_tags_files=1
-" let g:ycm_confirm_extra_conf=1
-" " let g:ycm_extra_conf_globlist=['~/workspace/*', '!~/*']
-" let g:ycm_filepath_completion_use_working_dir=1
-" " let g:ycm_global_ycm_extra_conf='~/.vim/source/'
-" " let g:ycm_seed_identifiers_with_syntax=1
-" let g:ycm_add_preview_to_completeopt=0
-" let g:ycm_min_num_identifier_candidate_chars=2
-" " let g:ycm_autoclose_preview_window_after_completion=1
-" set completeopt=menu,menuone
-" let g:ycm_complete_in_strings=1
-" let g:ycm_semantic_triggers =  {
-            " \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
-            " \ 'cs,lua,javascript': ['re!\w{2}'],
-            " \ }
-" let g:ycm_filetype_whitelist = { 
-            " \ "h":1,
-            " \ "hpp":1,
-            " \ "c":1,
-            " \ "cpp":1, 
-            " \ "objc":1,
-            " \ "sh":1,
-            " \ "zsh":1,
-            " \ "zimbu":1,
-            " \ }
-" let g:ycm_filetype_blacklist={
-            " \ 'markdown' : 1,
-            " \ 'text' : 1,
-            " \ 'tagbar' : 1,
-            " \ 'infolog' : 1,
-            " \}
-" let g:ycm_key_list_select_completion=['<C-n>', '<Down>']
-" let g:ycm_key_list_previous_completion=['<C-p>', '<Up>']
-
 " gruvbox
 let g:gruvbox_contrast_light="soft"
 
+" python-syntax
+let g:python_highlight_all = 1
+let g:python_version_2 = 1
