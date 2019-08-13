@@ -1,7 +1,7 @@
 " Plugin Configuration
 call plug#begin('~\vimfiles\autoload')
 " UI
-Plug 'Yggdroot/indentLine'
+" Plug 'Yggdroot/indentLine'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'sts10/vim-pink-moon'
 " File Tree
@@ -32,6 +32,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'easymotion/vim-easymotion'
 Plug 'leshill/vim-json'
+Plug 'editorconfig/editorconfig-vim'
 " Markdown
 Plug 'plasticboy/vim-markdown'
 Plug 'godlygeek/tabular'
