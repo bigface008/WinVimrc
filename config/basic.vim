@@ -11,6 +11,7 @@ set nowrap                   " Display auto new line
 set laststatus=2             " Always show statusline
 set display=lastline         " Show as much as possible of the last line
 set showmatch                " Show match bracket
+set sidescroll=1             " Move horizontally smoothly
 " set showmode               " Show current mode in command-line
 set noshowmode               " No mode in command-line
 set showcmd                  " Show already typed keys when more are expected
@@ -18,7 +19,7 @@ set hlsearch                 " Hightlight the search
 set incsearch                " Move to fit position after each char input
 set hidden                   " Swith between buffers without saving first
 set clipboard=unnamed        " Use system clipboard
-" set backspace=indent,eol,start " Better backspace
+set backspace=indent,eol,start " Better backspace
 set ttyfast                  " Fast redrawing
 set lazyredraw               " Only redraw when necessary
 " set novisualbell           " Something wrong
@@ -67,3 +68,10 @@ set fileencoding=utf-8
 source $VIMRUNTIME/delmenu.vim " Solve messy code of menu
 source $VIMRUNTIME/menu.vim
 language messages zh_CN.utf-8 " Solve messy code of console
+
+autocmd FileType json syntax match Comment +\/\/.\+$+
+
+" Ctags
+set tags=tags
+set tags+=./tags	" add current directory's generated tags file
+

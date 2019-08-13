@@ -2,30 +2,43 @@
 call plug#begin('~\vimfiles\autoload')
 " UI
 Plug 'Yggdroot/indentLine'
-Plug 'cormacrelf/vim-colors-github'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'sts10/vim-pink-moon'
 " File Tree
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" Plug 'Shougo/defx.nvim'
+" Plug 'roxma/nvim-yarp'
+" Plug 'roxma/vim-hug-neovim-rpc'
 " Plug 'xuyuanp/nerdtree-git-plugin'
 " Tag Tree
 Plug 'majutsushi/tagbar'
 " Version Control
-" Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 " Searcher
 Plug 'Yggdroot/LeaderF'
-Plug 'D:\program\fzf\fzf.exe'
-Plug 'junegunn/fzf.vim'
+" Plug 'D:\program\fzf\fzf.exe'
+" Plug 'junegunn/fzf.vim'
 " Language Support
+Plug 'davidhalter/jedi-vim'
 " Plug 'ludovicchabant/vim-gutentags'
 " Better Editor
+Plug 'junegunn/vim-easy-align'
+Plug 'vim-scripts/VOoM'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-python/python-syntax'
 Plug 'terryma/vim-multiple-cursors'
-" Plug 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'easymotion/vim-easymotion'
+Plug 'leshill/vim-json'
+" Markdown
+Plug 'plasticboy/vim-markdown'
+Plug 'godlygeek/tabular'
+Plug 'lvht/tagbar-markdown'
 " Plug 'tmhedberg/simpylfold'
+" Completetion
+
 call plug#end()
 
 " NerdTree
@@ -38,11 +51,13 @@ let NERDTreeMouseMode = 3
 map <leader><leader>e :NERDTreeToggle<CR> " Shortcut for open nerdtree
 
 " IndentLine
+let g:indentLine_noConcealCursor=""
 let g:indentLine_enabled=1             " Start indentLine.
 let g:indentLine_char='|'              " Set sign for number of tabs.
-" let g:indentLine_leadingSpaceEnabled=1 " Show leading spaces.
+let g:indentLine_leadingSpaceEnabled=1 " Show leading spaces.
 let g:indentLine_leadingSpaceChar='·'  " Set sign for leading spaces.
 let g:indentLine_fileTypeExclude = ['nerdtree'] " Fix the problem of indentation in nerdtree.
+let g:vim_json_syntax_conceal = 0
 
 " Tagbar
 let g:tagbar_ctags_bin="D:\\program\\ctags\\ctags.exe"
@@ -50,7 +65,7 @@ let g:tagbar_sort=0
 map <leader><leader>t :TagbarToggle<CR>
 " let g:tagbar_type_markdown = {
 "     \ 'ctagstype': 'markdown',
-"     \ 'ctagsbin' : '~\vimfiles\markdown2ctags.py',
+"     \ 'ctagsbin' : '~\\vimfiles\\markdown2ctags.py',
 "     \ 'ctagsargs' : '-f - --sort=yes --sro=»',
 "     \ 'kinds' : [
 "         \ 's:sections',
@@ -63,16 +78,17 @@ map <leader><leader>t :TagbarToggle<CR>
 "     \ 'sort': 1,
 " \ }
 " let g:tagbar_type_markdown = {
-    " \ 'ctagstype' : 'markdown',
-    " \ 'kinds' : [
-        " \ 'h:Heading_L1',
-        " \ 'i:Heading_L2',
-        " \ 'k:Heading_L3'
-    " \ ]
+"   \ 'ctagstype' : 'markdown',
+"   \ 'kinds' : [
+"       \ 'h:Heading_L1',
+"       \ 'i:Heading_L2',
+"       \ 'k:Heading_L3'
+"   \ ]
 " \ }
 
 " NerdCommenter
 let g:NERDSpaceDelims=1                " Put one space between comment and first word
+nnoremap <leader>/ :NERDCommenterToggle<Enter>
 
 " EasyMotion
 let g:EasyMotion_do_mapping = 0        " Disable default mappings
@@ -97,7 +113,7 @@ let g:Lf_StlSeparator = { 'left': '', 'right': '' }
 let g:Lf_Ctags = "D:\\program\\ctags\\ctags.exe"
 let g:Lf_ReverseOrder = 1
 let g:Lf_WindowHeight = 0.30
-noremap <leader>o :LeaderfFunction<Enter>
+noremap <leader>o :LeaderfBufTag<Enter>
 noremap <leader>r :LeaderfMru<Enter>
 noremap <leader>l :LeaderfLine<Enter>
 let g:Lf_StlPalette = {
@@ -203,3 +219,8 @@ let g:gruvbox_contrast_light="soft"
 " python-syntax
 let g:python_highlight_all = 1
 let g:python_version_2 = 1
+
+" Jedi
+let g:jedi#completions_command = "<C-;>"
+let g:jedi#goto_definitions_command = "gd"
+let g:jedi#rename_command = "<leader>r"

@@ -34,3 +34,11 @@ map <F11> <Esc>:call libcallnr("gvimfullscreen_64.dll", "ToggleFullScreen", 0)<C
 " Close highlight for search result.
 nnoremap <leader><leader>n :noh<Enter>
 
+" Generate and refresh markdown outline.
+nnoremap <leader><leader>m :Voom markdown<Enter>
+
+" Use <C-v> to paste content in insert mode.
+inoremap <C-v> <Esc>pa
+
+" Map EasyAlign.
+noremap = <Plug>(EasyAlign)
